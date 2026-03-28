@@ -1,0 +1,76 @@
+{
+  "directory_version": "1.2.0",
+  "last_updated": "2026-03-26",
+  "collections": [
+    {
+      "name": "projects",
+      "display_name": "Projects",
+      "description": "Full project lifecycle management — create projects with structured briefs, track ideas from private exploration to actionable artifacts, manage action items with dependency chains, record decisions, monitor comms channels, and generate status reports for stakeholders.",
+      "category": "project-management",
+      "author": "agent-index",
+      "current_version": "3.0.0",
+      "agent_index_min_version": "2.0.0",
+      "repo_url": "https://github.com/agent-index/agent-index-marketplace-projects",
+      "zip_url": "https://github.com/agent-index/agent-index-marketplace-projects/archive/refs/heads/main.zip",
+      "license": "proprietary",
+      "tags": ["projects", "teams", "collaboration", "planning", "action-items", "ideas", "decisions", "status-reports"],
+      "featured": true
+    },
+    {
+      "name": "strategy",
+      "display_name": "Strategy",
+      "description": "Build, evaluate, and evolve named strategies. Define canonical strategy references, configure information sources, run briefings that surface opportunities, and maintain a prioritized opportunity registry — privately or shared with collaborators.",
+      "category": "strategy",
+      "author": "agent-index",
+      "current_version": "1.0.0",
+      "agent_index_min_version": "2.0.0",
+      "repo_url": "https://github.com/agent-index/agent-index-marketplace-strategy",
+      "zip_url": "https://github.com/agent-index/agent-index-marketplace-strategy/archive/refs/heads/main.zip",
+      "license": "proprietary",
+      "tags": ["strategy", "briefings", "opportunities", "sources", "competitive-intelligence", "decision-making"],
+      "featured": true
+    },
+    {
+      "name": "capture",
+      "display_name": "Capture",
+      "description": "Personal capture and processing system. Quick-capture tasks, read-later content, ideas, and reference material into one unified registry. Organize with lists, tags, and contexts. Process your inbox and review what needs attention.",
+      "category": "personal-productivity",
+      "author": "agent-index",
+      "current_version": "1.0.0",
+      "agent_index_min_version": "1.0.0",
+      "repo_url": "https://github.com/agent-index/agent-index-marketplace-capture",
+      "zip_url": "https://github.com/agent-index/agent-index-marketplace-capture/archive/refs/heads/main.zip",
+      "license": "proprietary",
+      "tags": ["capture", "tasks", "read-later", "ideas", "productivity", "gtd", "inbox"],
+      "featured": true
+    },
+    {
+      "name": "email-triage",
+      "display_name": "Email Triage",
+      "description": "Automated Gmail inbox triage with configurable categories, priority detection, iterative training, and summary delivery via Slack or chat.",
+      "category": "communication",
+      "author": "agent-index",
+      "current_version": "1.0.0",
+      "agent_index_min_version": "2.0.0",
+      "repo_url": "https://github.com/agent-index/agent-index-marketplace-email-triage",
+      "zip_url": "https://github.com/agent-index/agent-index-marketplace-email-triage/archive/refs/heads/main.zip",
+      "license": "proprietary",
+      "tags": ["email", "gmail", "triage", "inbox", "classification", "priority", "slack", "digest", "newsletters"],
+      "featured": false
+    },
+    {
+      "name": "slack-triage",
+      "display_name": "Slack Triage",
+      "description": "Scan Slack for messages that need your response — unanswered DMs, @mentions, thread replies, and questions directed at you — and deliver a prioritized summary.",
+      "category": "communication",
+      "author": "agent-index",
+      "current_version": "1.0.0",
+      "agent_index_min_version": "2.0.0",
+      "repo_url": "https://github.com/agent-index/agent-index-marketplace-slack-triage",
+      "zip_url": "https://github.com/agent-index/agent-index-marketplace-slack-triage/archive/refs/heads/main.zip",
+      "license": "proprietary",
+      "tags": ["slack", "triage", "messages", "mentions", "threads", "response", "dms", "priority"],
+      "featured": false
+    }
+  ]
+}
