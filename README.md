@@ -1,4 +1,4 @@
-# marketplace
+# agent-index-resource-listings
 
 The public directory index for the agent-index ecosystem. Contains the registries that `create-org`, `check-updates`, and the marketplace collection use to discover and download collections and filesystem adapters.
 
