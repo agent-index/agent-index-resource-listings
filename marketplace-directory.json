@@ -1,6 +1,6 @@
 {
-  "directory_version": "1.2.0",
-  "last_updated": "2026-03-26",
+  "directory_version": "1.3.0",
+  "last_updated": "2026-04-01",
   "collections": [
     {
       "name": "projects",
@@ -70,6 +70,20 @@
       "zip_url": "https://github.com/agent-index/agent-index-marketplace-slack-triage/archive/refs/heads/main.zip",
       "license": "proprietary",
       "tags": ["slack", "triage", "messages", "mentions", "threads", "response", "dms", "priority"],
+      "featured": false
+    },
+    {
+      "name": "bug-reports",
+      "display_name": "Bug Reports",
+      "description": "Bug reporting workflow — any member can submit bugs, org admins can review, triage, and forward selected reports to the agent-index log collection server.",
+      "category": "developer-tools",
+      "author": "agent-index",
+      "current_version": "1.0.0",
+      "agent_index_min_version": "2.0.0",
+      "repo_url": "https://github.com/agent-index/agent-index-marketplace-bug-reports",
+      "zip_url": "https://github.com/agent-index/agent-index-marketplace-bug-reports/archive/refs/heads/main.zip",
+      "license": "open",
+      "tags": ["bugs", "bug-reports", "issues", "triage", "feedback", "quality"],
       "featured": false
     }
   ]
