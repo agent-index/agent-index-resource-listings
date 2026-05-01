@@ -1,13 +1,14 @@
 {
-  "directory_version": "1.0.0",
-  "last_updated": "2026-04-05",
+  "directory_version": "2.0.0",
+  "last_updated": "2026-04-30",
   "adapters": [
     {
       "backend_id": "gdrive",
       "display_name": "Google Drive",
       "description": "Google Drive and Shared Drives. Supports personal and organizational drives with OAuth2 per-member authentication.",
       "author": "agent-index",
-      "current_version": "1.0.1",
+      "current_version": "2.2.0",
+      "contract_version": "2.0.0",
       "core_min_version": "1.0.0",
       "auth_method": "oauth2",
       "repo_url": "https://github.com/agent-index/agent-index-filesystem-gdrive",
@@ -20,6 +21,7 @@
       "description": "Microsoft OneDrive and SharePoint document libraries. Uses Microsoft Graph API with OAuth2 per-member authentication.",
       "author": "agent-index",
       "current_version": "1.0.0",
+      "contract_version": "1.0.0",
       "core_min_version": "1.0.0",
       "auth_method": "oauth2",
       "repo_url": "https://github.com/agent-index/agent-index-filesystem-onedrive",
@@ -32,6 +34,7 @@
       "description": "Amazon S3 object storage. Supports IAM credentials and AWS SSO for per-member authentication.",
       "author": "agent-index",
       "current_version": "1.0.0",
+      "contract_version": "1.0.0",
       "core_min_version": "1.0.0",
       "auth_method": "aws-credentials",
       "repo_url": "https://github.com/agent-index/agent-index-filesystem-s3",
