@@ -1,6 +1,6 @@
 {
-  "directory_version": "1.4.1",
-  "last_updated": "2026-05-02",
+  "directory_version": "1.4.2",
+  "last_updated": "2026-05-05",
   "collections": [
     {
       "name": "projects",
@@ -142,7 +142,7 @@
       "description": "Unified development experience for building, evolving, and shipping agent-index collections \u2014 from first idea through marketplace submission.",
       "category": "developer-tools",
       "author": "agent-index",
-      "current_version": "1.2.2",
+      "current_version": "1.2.3",
       "agent_index_min_version": "3.0.0",
       "repo_url": "https://github.com/agent-index/agent-index-marketplace-developer",
       "zip_url": "https://github.com/agent-index/agent-index-marketplace-developer/archive/refs/heads/main.zip",
