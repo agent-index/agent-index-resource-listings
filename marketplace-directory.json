@@ -1,11 +1,11 @@
 {
-  "directory_version": "1.4.3",
+  "directory_version": "1.4.4",
   "last_updated": "2026-05-07",
   "collections": [
     {
       "name": "projects",
       "display_name": "Projects",
-      "description": "Full project lifecycle management \u2014 create projects with structured briefs, track ideas from private exploration to actionable artifacts, manage action items with dependency chains, record decisions, monitor comms channels, and generate status reports for stakeholders.",
+      "description": "Full project lifecycle management — create projects with structured briefs, track ideas from private exploration to actionable artifacts, manage action items with dependency chains, record decisions, monitor comms channels, and generate status reports for stakeholders.",
       "category": "project-management",
       "author": "agent-index",
       "current_version": "3.0.6",
@@ -28,7 +28,7 @@
     {
       "name": "strategy",
       "display_name": "Strategy",
-      "description": "Build, evaluate, and evolve named strategies. Define canonical strategy references, configure information sources, run briefings that surface opportunities, and maintain a prioritized opportunity registry \u2014 privately or shared with collaborators.",
+      "description": "Build, evaluate, and evolve named strategies. Define canonical strategy references, configure information sources, run briefings that surface opportunities, and maintain a prioritized opportunity registry — privately or shared with collaborators.",
       "category": "strategy",
       "author": "agent-index",
       "current_version": "1.0.3",
@@ -95,7 +95,7 @@
     {
       "name": "slack-triage",
       "display_name": "Slack Triage",
-      "description": "Scan Slack for messages that need your response \u2014 unanswered DMs, @mentions, thread replies, and questions directed at you \u2014 and deliver a prioritized summary.",
+      "description": "Scan Slack for messages that need your response — unanswered DMs, @mentions, thread replies, and questions directed at you — and deliver a prioritized summary.",
       "category": "communication",
       "author": "agent-index",
       "current_version": "1.1.1",
@@ -118,7 +118,7 @@
     {
       "name": "bug-reports",
       "display_name": "Bug Reports",
-      "description": "Bug reporting workflow \u2014 any member can submit bugs, org admins can review, triage, and forward selected reports to the agent-index log collection server.",
+      "description": "Bug reporting workflow — any member can submit bugs, org admins can review, triage, and forward selected reports to the agent-index log collection server.",
       "category": "developer-tools",
       "author": "agent-index",
       "current_version": "1.1.1",
@@ -139,10 +139,10 @@
     {
       "name": "developer",
       "display_name": "Developer",
-      "description": "Unified development experience for building, evolving, and shipping agent-index collections \u2014 from first idea through marketplace submission.",
+      "description": "Unified development experience for building, evolving, and shipping agent-index collections — from first idea through marketplace submission.",
       "category": "developer-tools",
       "author": "agent-index",
-      "current_version": "1.2.4",
+      "current_version": "1.3.0",
       "agent_index_min_version": "3.0.0",
       "repo_url": "https://github.com/agent-index/agent-index-marketplace-developer",
       "zip_url": "https://github.com/agent-index/agent-index-marketplace-developer/archive/refs/heads/main.zip",
@@ -156,7 +156,8 @@
         "marketplace",
         "development"
       ],
-      "featured": false
+      "featured": false,
+      "last_updated": "2026-05-11"
     }
   ]
 }
