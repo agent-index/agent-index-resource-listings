@@ -1,6 +1,6 @@
 {
-  "directory_version": "1.1.1",
-  "last_updated": "2026-05-05",
+  "directory_version": "1.1.2",
+  "last_updated": "2026-05-07",
   "infrastructure": [
     {
       "name": "agent-index-core",
@@ -8,13 +8,20 @@
       "description": "The foundational collection: session bootstrap, member management, org configuration, capability authoring, update orchestration, and the canonical CLAUDE.md template. Required for every agent-index install.",
       "category": "infrastructure",
       "author": "agent-index",
-      "current_version": "3.5.0",
+      "current_version": "3.6.0",
       "agent_index_min_version": "3.0.0",
       "repo_url": "https://github.com/agent-index/agent-index-core",
       "zip_url": "https://github.com/agent-index/agent-index-core/archive/refs/heads/main.zip",
       "license": "proprietary",
       "private": true,
-      "tags": ["infrastructure", "core", "session-management", "org-management", "member-bootstrap", "update-orchestration"]
+      "tags": [
+        "infrastructure",
+        "core",
+        "session-management",
+        "org-management",
+        "member-bootstrap",
+        "update-orchestration"
+      ]
     },
     {
       "name": "agent-index-marketplace",
@@ -22,12 +29,18 @@
       "description": "The marketplace integration collection: discover, download, and install marketplace collections; check for updates across all installed pieces; refresh the marketplace cache.",
       "category": "infrastructure",
       "author": "agent-index",
-      "current_version": "2.2.1",
+      "current_version": "2.3.0",
       "agent_index_min_version": "3.0.0",
       "repo_url": "https://github.com/agent-index/agent-index-marketplace",
       "zip_url": "https://github.com/agent-index/agent-index-marketplace/archive/refs/heads/main.zip",
       "license": "proprietary",
-      "tags": ["infrastructure", "marketplace", "discovery", "installation", "update-checking"]
+      "tags": [
+        "infrastructure",
+        "marketplace",
+        "discovery",
+        "installation",
+        "update-checking"
+      ]
     }
   ],
   "binaries": [
@@ -41,17 +54,51 @@
       "min_required_version": "0.2.0",
       "release_url_template": "https://github.com/agent-index/agent-index-permissions-binaries/releases/download/v{version}/{filename}",
       "platforms": [
-        {"os": "windows", "arch": "amd64", "filename": "agent-index-show-plan-{version}-windows-amd64.exe", "sha256": "f0a8ca62065c1d441d294ac0c45d70a22725dd66c5f8b389d4bf86d072f91d7b"},
-        {"os": "windows", "arch": "arm64", "filename": "agent-index-show-plan-{version}-windows-arm64.exe", "sha256": "eee8e7bbd958dd3b0fc3d1dedddacd11b066084e007e5fa7f854c75145d180a8"},
-        {"os": "darwin",  "arch": "amd64", "filename": "agent-index-show-plan-{version}-darwin-amd64",     "sha256": "9ce20d83eb039229b57ad584751997c9cc972738bcb7bddd27393541b53f8ab9"},
-        {"os": "darwin",  "arch": "arm64", "filename": "agent-index-show-plan-{version}-darwin-arm64",     "sha256": "98b5eeeedd75bfea16b37cafc1390345a546d59a8f5dde3a478dc07d89de766d"},
-        {"os": "linux",   "arch": "amd64", "filename": "agent-index-show-plan-{version}-linux-amd64",      "sha256": "fc8107163996612115c832f68f37337b8106cc57195c80c9f519807cd9ca866a"},
-        {"os": "linux",   "arch": "arm64", "filename": "agent-index-show-plan-{version}-linux-arm64",      "sha256": "8f95048d150ae43d0d72efb467a96b78038ccecf169a3fc96c08c626efe00d08"}
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "agent-index-show-plan-{version}-windows-amd64.exe",
+          "sha256": "f0a8ca62065c1d441d294ac0c45d70a22725dd66c5f8b389d4bf86d072f91d7b"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "agent-index-show-plan-{version}-windows-arm64.exe",
+          "sha256": "eee8e7bbd958dd3b0fc3d1dedddacd11b066084e007e5fa7f854c75145d180a8"
+        },
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "agent-index-show-plan-{version}-darwin-amd64",
+          "sha256": "9ce20d83eb039229b57ad584751997c9cc972738bcb7bddd27393541b53f8ab9"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "agent-index-show-plan-{version}-darwin-arm64",
+          "sha256": "98b5eeeedd75bfea16b37cafc1390345a546d59a8f5dde3a478dc07d89de766d"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "agent-index-show-plan-{version}-linux-amd64",
+          "sha256": "fc8107163996612115c832f68f37337b8106cc57195c80c9f519807cd9ca866a"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "agent-index-show-plan-{version}-linux-arm64",
+          "sha256": "8f95048d150ae43d0d72efb467a96b78038ccecf169a3fc96c08c626efe00d08"
+        }
       ],
       "install_destination": "mcp-servers/permission-helper-go/agent-index-show-plan{ext}",
       "post_install_command": "{binary} --register",
       "version_file": "mcp-servers/permission-helper-go/version.txt",
-      "tags": ["binary", "permission-helper", "url-handler"]
+      "tags": [
+        "binary",
+        "permission-helper",
+        "url-handler"
+      ]
     }
   ]
 }
