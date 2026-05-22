@@ -1,6 +1,6 @@
 {
-  "directory_version": "1.1.6",
-  "last_updated": "2026-05-13",
+  "directory_version": "1.1.7",
+  "last_updated": "2026-05-21",
   "infrastructure": [
     {
       "name": "agent-index-core",
@@ -8,7 +8,7 @@
       "description": "The foundational collection: session bootstrap, member management, org configuration, capability authoring, update orchestration, and the canonical CLAUDE.md template. Required for every agent-index install.",
       "category": "infrastructure",
       "author": "agent-index",
-      "current_version": "3.7.2",
+      "current_version": "3.7.3",
       "agent_index_min_version": "3.0.0",
       "repo_url": "https://github.com/agent-index/agent-index-core",
       "zip_url": "https://github.com/agent-index/agent-index-core/archive/refs/heads/main.zip",
@@ -29,7 +29,7 @@
       "description": "The marketplace integration collection: discover, download, and install marketplace collections; check for updates across all installed pieces; refresh the marketplace cache.",
       "category": "infrastructure",
       "author": "agent-index",
-      "current_version": "2.5.0",
+      "current_version": "2.6.0",
       "agent_index_min_version": "3.0.0",
       "repo_url": "https://github.com/agent-index/agent-index-marketplace",
       "zip_url": "https://github.com/agent-index/agent-index-marketplace/archive/refs/heads/main.zip",

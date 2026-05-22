@@ -1,6 +1,6 @@
 {
-  "directory_version": "1.5.0",
-  "last_updated": "2026-05-15",
+  "directory_version": "1.5.1",
+  "last_updated": "2026-05-21",
   "collections": [
     {
       "name": "projects",
@@ -166,7 +166,7 @@
       "description": "Primary repository of client-level knowledge. Admins author named templates that define mandatory and optional fields. Members create client instances from templates, can add their own extension fields, and manage per-instance View / Edit / Delete permissions enforced by Drive ACLs. A universally-visible visibility floor exposes client names to all collection members while gating data behind view permission. v1.0.0 ships 15 user-facing tasks plus a tutorial skill and an install-time bootstrap.",
       "category": "client-management",
       "author": "agent-index",
-      "current_version": "1.0.0",
+      "current_version": "1.1.0",
       "agent_index_min_version": "3.1.0",
       "repo_url": "https://github.com/agent-index/agent-index-marketplace-client-intelligence",
       "zip_url": "https://github.com/agent-index/agent-index-marketplace-client-intelligence/archive/refs/heads/main.zip",
