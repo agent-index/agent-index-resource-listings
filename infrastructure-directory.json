@@ -1,5 +1,5 @@
 {
-  "directory_version": "1.1.12",
+  "directory_version": "1.1.13",
   "last_updated": "2026-06-04",
   "infrastructure": [
     {
@@ -50,45 +50,45 @@
       "description": "Native binary that reviews and applies permission changes via a one-click localhost browser flow. Registered as the agent-index:// URL scheme handler so chat-side links route directly to it. Replaces the Node helper for orgs that have it installed; the Node helper remains as a fallback.",
       "category": "binary",
       "author": "agent-index",
-      "current_version": "0.3.0",
-      "min_required_version": "0.3.0",
+      "current_version": "0.4.0",
+      "min_required_version": "0.4.0",
       "release_url_template": "https://github.com/agent-index/agent-index-permissions-binaries/releases/download/v{version}/{filename}",
       "platforms": [
         {
           "os": "windows",
           "arch": "amd64",
           "filename": "agent-index-show-plan-{version}-windows-amd64.exe",
-          "sha256": "0937339ff2824f257b571a137b532cc4d9739db15bc62f31a7f8cdf18f9187d1"
+          "sha256": "8acb18de75491803ca01c84f3714dec1c5231cd28dc3ac0248b7b4e0233c2142"
         },
         {
           "os": "windows",
           "arch": "arm64",
           "filename": "agent-index-show-plan-{version}-windows-arm64.exe",
-          "sha256": "3001297c706441c3555de9784c371d667dd5b2127f9493fb2ec71d6824d982f8"
+          "sha256": "d1eba70417e07743b8dbb50cc33f01eaa751c935a589aba53f23cdac69340970"
         },
         {
           "os": "darwin",
           "arch": "amd64",
           "filename": "agent-index-show-plan-{version}-darwin-amd64",
-          "sha256": "ed0c5db0135932c795f3785346905a95e6b991e2b75a6720de71a08188fa2473"
+          "sha256": "945896578a856596a88c1b8ce078693d3e10a36de2a7ad8a4e7c23a5eba44055"
         },
         {
           "os": "darwin",
           "arch": "arm64",
           "filename": "agent-index-show-plan-{version}-darwin-arm64",
-          "sha256": "405715d591dd4b95a598b26ea2d39fcaf77d9cca56935110adc12af43cbcd9ba"
+          "sha256": "209e8eb9ae1c5f38d16d267320ad3e3ac7b4f4adc5a0c4180108ed47bfb2b630"
         },
         {
           "os": "linux",
           "arch": "amd64",
           "filename": "agent-index-show-plan-{version}-linux-amd64",
-          "sha256": "03023f1b934c1da67fcc4807a2b2b31f02384f65f4d77a8889892c2d800297bb"
+          "sha256": "81f37eaf0f9ee073e9b11564ea30d6290aa92ca937de31215bef2a60e384b525"
         },
         {
           "os": "linux",
           "arch": "arm64",
           "filename": "agent-index-show-plan-{version}-linux-arm64",
-          "sha256": "cd6a082af224630b3c6b513f299737c024f5d891d81ad4b8bb961896e11beb4c"
+          "sha256": "5de04421d70a15c3bdaef77a4933c90984d5857f5e49223c6bc3742c8ee1bc4e"
         }
       ],
       "install_destination": "mcp-servers/permission-helper-go/agent-index-show-plan{ext}",
