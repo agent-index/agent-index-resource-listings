@@ -1,6 +1,6 @@
 {
-  "directory_version": "1.5.4",
-  "last_updated": "2026-06-01",
+  "directory_version": "1.5.6",
+  "last_updated": "2026-06-03",
   "collections": [
     {
       "name": "projects",
@@ -28,11 +28,12 @@
     {
       "name": "strategy",
       "display_name": "Strategy",
-      "description": "Build, evaluate, and evolve named strategies. Define canonical strategy references, configure information sources, run briefings that surface opportunities, and maintain a prioritized opportunity registry \u2014 privately or shared with collaborators.",
+      "description": "Build, evaluate, and evolve named strategies. Define canonical strategy references, configure information sources, run briefings that surface opportunities, and maintain a prioritized opportunity registry \u2014 private by default, shared per-person from your own member space (readers, collaborators, or org-wide read) with discovery via a pointer index.",
       "category": "strategy",
       "author": "agent-index",
-      "current_version": "1.0.3",
-      "agent_index_min_version": "3.0.0",
+      "current_version": "1.1.0",
+      "agent_index_min_version": "3.8.0",
+      "last_updated": "2026-06-03",
       "repo_url": "https://github.com/agent-index/agent-index-marketplace-strategy",
       "zip_url": "https://github.com/agent-index/agent-index-marketplace-strategy/archive/refs/heads/main.zip",
       "license": "proprietary",

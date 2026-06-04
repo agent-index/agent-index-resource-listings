@@ -1,13 +1,13 @@
 {
-  "directory_version": "2.0.5",
-  "last_updated": "2026-05-26",
+  "directory_version": "2.0.6",
+  "last_updated": "2026-06-03",
   "adapters": [
     {
       "backend_id": "gdrive",
       "display_name": "Google Drive",
       "description": "Google Drive and Shared Drives. Supports personal and organizational drives with OAuth2 per-member authentication.",
       "author": "agent-index",
-      "current_version": "2.4.1",
+      "current_version": "2.5.0",
       "contract_version": "2.0.0",
       "core_min_version": "1.0.0",
       "auth_method": "oauth2",
