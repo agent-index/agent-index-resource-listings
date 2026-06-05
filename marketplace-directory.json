@@ -1,5 +1,5 @@
 {
-  "directory_version": "1.5.9",
+  "directory_version": "1.5.10",
   "last_updated": "2026-06-04",
   "collections": [
     {
@@ -164,11 +164,11 @@
     {
       "name": "client-intelligence",
       "display_name": "Client Intelligence",
-      "description": "Primary repository of client-level knowledge. Admins author named templates that define mandatory and optional fields. Members create client instances from templates, can add their own extension fields, and manage per-instance View / Edit / Delete permissions enforced by Drive ACLs. A universally-visible visibility floor exposes client names to all collection members while gating data behind view permission. v1.0.0 ships 15 user-facing tasks plus a tutorial skill and an install-time bootstrap.",
+      "description": "Primary repository of client-level knowledge. Admins author named templates; members create client instances from them. v2.0.0 two-tier model: clients are private by default (member's own My Drive, owner-applied per-person sharing) or org-public (org commons, uniform collaborative access with changelog attribution); a universal visibility floor keeps every client's name and owner org-discoverable via the pointer index. New transition-client task moves clients between tiers. MAJOR upgrade from 1.x — see upgrade/1-to-2.md (gated-instance review required before provisioning).",
       "category": "client-management",
       "author": "agent-index",
-      "current_version": "1.1.1",
-      "agent_index_min_version": "3.1.0",
+      "current_version": "2.0.0",
+      "agent_index_min_version": "3.9.0",
       "repo_url": "https://github.com/agent-index/agent-index-marketplace-client-intelligence",
       "zip_url": "https://github.com/agent-index/agent-index-marketplace-client-intelligence/archive/refs/heads/main.zip",
       "license": "open",
@@ -181,7 +181,7 @@
         "visibility-floor"
       ],
       "featured": false,
-      "last_updated": "2026-05-15"
+      "last_updated": "2026-06-05"
     }
   ]
 }
