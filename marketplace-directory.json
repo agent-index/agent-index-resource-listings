@@ -1,11 +1,11 @@
 {
-  "directory_version": "1.7.0",
-  "last_updated": "2026-06-08",
+  "directory_version": "1.8.0",
+  "last_updated": "2026-06-10",
   "collections": [
     {
       "name": "projects",
       "display_name": "Projects",
-      "description": "Full project lifecycle management \u2014 create projects with structured briefs, track ideas from private exploration to actionable artifacts, manage action items with dependency chains, record decisions, monitor comms channels, and generate status reports. v4.0.0 two-tier model: projects org-public by default (commons, attributed writes) or private (owner's My Drive, invisible until shared; roster = grants); ideas private-and-invisible by default with share/promote/unshare; artifacts inherit parent access structurally; transition-project moves tiers; pointer-index discovery. MAJOR \u2014 see upgrade/3-to-4.md (inventory + gated-idea review before provisioning).",
+      "description": "Full project lifecycle management — create projects with structured briefs, track ideas from private exploration to actionable artifacts, manage action items with dependency chains, record decisions, monitor comms channels, and generate status reports. v4.0.0 two-tier model: projects org-public by default (commons, attributed writes) or private (owner's My Drive, invisible until shared; roster = grants); ideas private-and-invisible by default with share/promote/unshare; artifacts inherit parent access structurally; transition-project moves tiers; pointer-index discovery. MAJOR — see upgrade/3-to-4.md (inventory + gated-idea review before provisioning).",
       "category": "project-management",
       "author": "agent-index",
       "current_version": "4.0.0",
@@ -28,7 +28,7 @@
     {
       "name": "strategy",
       "display_name": "Strategy",
-      "description": "Build, evaluate, and evolve named strategies. Define canonical strategy references, configure information sources, run briefings that surface opportunities, and maintain a prioritized opportunity registry \u2014 private by default, shared per-person from your own member space (readers, collaborators, or org-wide read) with discovery via a pointer index.",
+      "description": "Build, evaluate, and evolve named strategies. Define canonical strategy references, configure information sources, run briefings that surface opportunities, and maintain a prioritized opportunity registry — private by default, shared per-person from your own member space (readers, collaborators, or org-wide read) with discovery via a pointer index.",
       "category": "strategy",
       "author": "agent-index",
       "current_version": "1.1.4",
@@ -98,7 +98,7 @@
     {
       "name": "slack-triage",
       "display_name": "Slack Triage",
-      "description": "Scan Slack for messages that need your response \u2014 unanswered DMs, @mentions, thread replies, and questions directed at you \u2014 and deliver a prioritized summary.",
+      "description": "Scan Slack for messages that need your response — unanswered DMs, @mentions, thread replies, and questions directed at you — and deliver a prioritized summary.",
       "category": "communication",
       "author": "agent-index",
       "current_version": "1.1.2",
@@ -122,7 +122,7 @@
     {
       "name": "bug-reports",
       "display_name": "Bug Reports",
-      "description": "Bug reporting workflow \u2014 any member can submit and update their own bugs, org admins can review, triage, and forward selected reports to the agent-index log collection server.",
+      "description": "Bug reporting workflow — any member can submit and update their own bugs, org admins can review, triage, and forward selected reports to the agent-index log collection server.",
       "category": "developer-tools",
       "author": "agent-index",
       "current_version": "1.3.2",
@@ -144,10 +144,10 @@
     {
       "name": "developer",
       "display_name": "Developer",
-      "description": "Unified development experience for building, evolving, and shipping agent-index collections \u2014 from first idea through marketplace submission.",
+      "description": "Unified development experience for building, evolving, and shipping agent-index collections — from first idea through marketplace submission.",
       "category": "developer-tools",
       "author": "agent-index",
-      "current_version": "1.5.0",
+      "current_version": "1.6.0",
       "agent_index_min_version": "3.9.0",
       "repo_url": "https://github.com/agent-index/agent-index-marketplace-developer",
       "zip_url": "https://github.com/agent-index/agent-index-marketplace-developer/archive/refs/heads/main.zip",
@@ -162,12 +162,12 @@
         "development"
       ],
       "featured": false,
-      "last_updated": "2026-06-06"
+      "last_updated": "2026-06-10"
     },
     {
       "name": "client-intelligence",
       "display_name": "Client Intelligence",
-      "description": "Primary repository of client-level knowledge. Admins author named templates; members create client instances from them. v2.0.0 two-tier model: clients are private by default (member's own My Drive, owner-applied per-person sharing) or org-public (org commons, uniform collaborative access with changelog attribution); a universal visibility floor keeps every client's name and owner org-discoverable via the pointer index. New transition-client task moves clients between tiers. MAJOR upgrade from 1.x \u2014 see upgrade/1-to-2.md (gated-instance review required before provisioning).",
+      "description": "Primary repository of client-level knowledge. Admins author named templates; members create client instances from them. v2.0.0 two-tier model: clients are private by default (member's own My Drive, owner-applied per-person sharing) or org-public (org commons, uniform collaborative access with changelog attribution); a universal visibility floor keeps every client's name and owner org-discoverable via the pointer index. New transition-client task moves clients between tiers. MAJOR upgrade from 1.x — see upgrade/1-to-2.md (gated-instance review required before provisioning).",
       "category": "client-management",
       "author": "agent-index",
       "current_version": "2.1.1",
@@ -195,7 +195,7 @@
     {
       "name": "brand-book",
       "display_name": "Brand Book",
-      "description": "Org brand identity as a service \u2014 design tokens, voice, display elements, and artifact templates with counterparty slots. Registers as the brand-book capability provider; artifact-producing collections inherit consistent form, function, and UI.",
+      "description": "Org brand identity as a service — design tokens, voice, display elements, and artifact templates with counterparty slots. Registers as the brand-book capability provider; artifact-producing collections inherit consistent form, function, and UI.",
       "category": "design",
       "author": "agent-index",
       "current_version": "1.0.1",
