@@ -1,20 +1,20 @@
 {
-  "directory_version": "2.1.0",
-  "last_updated": "2026-06-08",
+  "directory_version": "2.2.0",
+  "last_updated": "2026-06-10",
   "adapters": [
     {
       "backend_id": "gdrive",
       "display_name": "Google Drive",
       "description": "Google Drive and Shared Drives. Supports personal and organizational drives with OAuth2 per-member authentication.",
       "author": "agent-index",
-      "current_version": "2.5.1",
+      "current_version": "2.6.0",
       "contract_version": "2.0.0",
       "core_min_version": "1.0.0",
       "auth_method": "oauth2",
       "repo_url": "https://github.com/agent-index/agent-index-filesystem-gdrive",
       "zip_url": "https://github.com/agent-index/agent-index-filesystem-gdrive/archive/refs/heads/main.zip",
       "license": "proprietary",
-      "last_updated": "2026-06-08"
+      "last_updated": "2026-06-10"
     },
     {
       "backend_id": "onedrive",
