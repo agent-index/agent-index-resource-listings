@@ -1,6 +1,6 @@
 {
-  "directory_version": "2.2.0",
-  "last_updated": "2026-06-10",
+  "directory_version": "2.3.0",
+  "last_updated": "2026-06-13",
   "adapters": [
     {
       "backend_id": "gdrive",
@@ -19,10 +19,10 @@
     {
       "backend_id": "onedrive",
       "display_name": "Microsoft OneDrive / SharePoint",
-      "description": "Microsoft OneDrive and SharePoint document libraries. Uses Microsoft Graph API with OAuth2 per-member authentication.",
+      "description": "Microsoft OneDrive and SharePoint document libraries. Uses Microsoft Graph API with single-tenant public-client (PKCE, no secret) per-member authentication. Contract-2.0 core ops; ACL ops are the fast-follow.",
       "author": "agent-index",
-      "current_version": "1.0.0",
-      "contract_version": "1.0.0",
+      "current_version": "2.0.1",
+      "contract_version": "2.0.0",
       "core_min_version": "1.0.0",
       "auth_method": "oauth2",
       "repo_url": "https://github.com/agent-index/agent-index-filesystem-onedrive",
