@@ -1,14 +1,15 @@
 {
-  "directory_version": "1.8.0",
-  "last_updated": "2026-06-15",
+  "directory_version": "1.9.0",
+  "last_updated": "2026-06-16",
   "infrastructure": [
     {
+      "_release": "B — 3.13.0: onedrive ACL provisioning (M365 group all-members + collaborator grants), per-adapter helper binary selection, setupresp/localcfgtrunc/pkcerestart/memberlicense reliability bundle, trunc doc-audit close.",
       "name": "agent-index-core",
       "display_name": "Agent-Index Core",
       "description": "The foundational collection: session bootstrap, member management, org configuration, capability authoring, update orchestration, and the canonical CLAUDE.md template. Required for every agent-index install.",
       "category": "infrastructure",
       "author": "agent-index",
-      "current_version": "3.12.2",
+      "current_version": "3.13.0",
       "agent_index_min_version": "3.0.0",
       "repo_url": "https://github.com/agent-index/agent-index-core",
       "zip_url": "https://github.com/agent-index/agent-index-core/archive/refs/heads/main.zip",
@@ -30,7 +31,7 @@
       "description": "The marketplace integration collection: discover, download, and install marketplace collections; check for updates across all installed pieces; refresh the marketplace cache.",
       "category": "infrastructure",
       "author": "agent-index",
-      "current_version": "2.11.2",
+      "current_version": "2.12.0",
       "agent_index_min_version": "3.0.0",
       "repo_url": "https://github.com/agent-index/agent-index-marketplace",
       "zip_url": "https://github.com/agent-index/agent-index-marketplace/archive/refs/heads/main.zip",
@@ -48,9 +49,10 @@
   "binaries": [
     {
       "name": "permission-helper-go",
-      "display_name": "Permission Change Helper",
-      "description": "Native binary that reviews and applies permission changes via a one-click localhost browser flow. Registered as the agent-index:// URL scheme handler so chat-side links route directly to it. Replaces the Node helper for orgs that have it installed; the Node helper remains as a fallback.",
+      "display_name": "Permission Change Helper (Google Drive)",
+      "description": "Native binary that reviews and applies permission changes via a one-click localhost browser flow. Registered as the agent-index:// URL scheme handler so chat-side links route directly to it. gdrive build (embeds the Drive API). apply-updates installs the binary whose `backend` matches the org's remote_filesystem.backend, to the shared install_destination.",
       "category": "binary",
+      "backend": "gdrive",
       "author": "agent-index",
       "current_version": "0.4.1",
       "min_required_version": "0.4.1",
@@ -100,6 +102,34 @@
         "binary",
         "permission-helper",
         "url-handler"
+      ]
+    },
+    {
+      "name": "permission-helper-go-onedrive",
+      "display_name": "Permission Change Helper (OneDrive / SharePoint)",
+      "description": "OneDrive/SharePoint build of the permission helper (embeds Microsoft Graph; shares the Go core with the gdrive build). Release B. apply-updates installs this binary ONLY when the org's remote_filesystem.backend is 'onedrive', to the shared install_destination — so the helper skill, invite-member, etc. reference the same path regardless of backend. Additive grants only; transferOwnership returns NOT_IMPLEMENTED.",
+      "category": "binary",
+      "backend": "onedrive",
+      "author": "agent-index",
+      "current_version": "0.5.0",
+      "min_required_version": "0.5.0",
+      "release_url_template": "https://github.com/agent-index/agent-index-permissions-binaries/releases/download/v{version}/{filename}",
+      "platforms": [
+        { "os": "windows", "arch": "amd64", "filename": "agent-index-show-plan-onedrive-{version}-windows-amd64.exe", "sha256": "aa559a6bac20999deec755320fe1351cd4239fb6f35864dd08c7c4d73cb47416" },
+        { "os": "windows", "arch": "arm64", "filename": "agent-index-show-plan-onedrive-{version}-windows-arm64.exe", "sha256": "a14406a8cdf57a4be33247dc6e47b3810dc5e44bd1ad312396cdc7eb57981f56" },
+        { "os": "darwin", "arch": "amd64", "filename": "agent-index-show-plan-onedrive-{version}-darwin-amd64", "sha256": "b852d844b623631bca8f4c4e172ae80943e7a2ea5954af95dd4d4075305a48be" },
+        { "os": "darwin", "arch": "arm64", "filename": "agent-index-show-plan-onedrive-{version}-darwin-arm64", "sha256": "d0afdb8f6ce9fea85774c991fca741f8ae3796a34be6fa23de0a22ab56204668" },
+        { "os": "linux", "arch": "amd64", "filename": "agent-index-show-plan-onedrive-{version}-linux-amd64", "sha256": "fe8e0aced23ba8f3cad48e00ced0b0730b27e4b0fbeeda050ccb7d14522a702b" },
+        { "os": "linux", "arch": "arm64", "filename": "agent-index-show-plan-onedrive-{version}-linux-arm64", "sha256": "da6b54810f51c5dbcc2912e7cdac18e79726989966da5cb3d7f6e8d5273e84f6" }
+      ],
+      "install_destination": "mcp-servers/permission-helper-go/agent-index-show-plan{ext}",
+      "post_install_command": "{binary} --register",
+      "version_file": "mcp-servers/permission-helper-go/version.txt",
+      "tags": [
+        "binary",
+        "permission-helper",
+        "url-handler",
+        "onedrive"
       ]
     }
   ]

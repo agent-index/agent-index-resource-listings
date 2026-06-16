@@ -1,6 +1,6 @@
 {
-  "directory_version": "2.5.0",
-  "last_updated": "2026-06-15",
+  "directory_version": "2.6.0",
+  "last_updated": "2026-06-16",
   "adapters": [
     {
       "backend_id": "gdrive",
@@ -19,9 +19,9 @@
     {
       "backend_id": "onedrive",
       "display_name": "Microsoft OneDrive / SharePoint",
-      "description": "Microsoft OneDrive and SharePoint document libraries. Uses Microsoft Graph API with single-tenant public-client (PKCE, no secret) per-member authentication. Contract-2.0 core ops; ACL ops are the fast-follow.",
+      "description": "Microsoft OneDrive and SharePoint document libraries. Uses Microsoft Graph API with single-tenant public-client (PKCE, no secret) per-member authentication. Full contract-2.0 parity (Release B): core ops + ACL ops share/unshare/getPermissions/search (additive grants only; inherit:false deprecated) + transferOwnership NOT_IMPLEMENTED.",
       "author": "agent-index",
-      "current_version": "2.0.3",
+      "current_version": "2.1.0",
       "contract_version": "2.0.0",
       "core_min_version": "1.0.0",
       "auth_method": "oauth2",
