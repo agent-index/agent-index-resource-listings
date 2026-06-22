@@ -1,6 +1,6 @@
 {
-  "directory_version": "1.10.0",
-  "last_updated": "2026-06-16",
+  "directory_version": "1.11.0",
+  "last_updated": "2026-06-21",
   "infrastructure": [
     {
       "_release": "B — 3.13.0: onedrive ACL provisioning (M365 group all-members + collaborator grants), per-adapter helper binary selection, setupresp/localcfgtrunc/pkcerestart/memberlicense reliability bundle, trunc doc-audit close.",
@@ -9,7 +9,7 @@
       "description": "The foundational collection: session bootstrap, member management, org configuration, capability authoring, update orchestration, and the canonical CLAUDE.md template. Required for every agent-index install.",
       "category": "infrastructure",
       "author": "agent-index",
-      "current_version": "3.15.0",
+      "current_version": "3.16.0",
       "agent_index_min_version": "3.0.0",
       "repo_url": "https://github.com/agent-index/agent-index-core",
       "zip_url": "https://github.com/agent-index/agent-index-core/archive/refs/heads/main.zip",
