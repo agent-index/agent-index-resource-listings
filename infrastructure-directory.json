@@ -1,15 +1,15 @@
 {
-  "directory_version": "1.12.0",
-  "last_updated": "2026-06-24",
+  "directory_version": "1.13.0",
+  "last_updated": "2026-06-25",
   "infrastructure": [
     {
-      "_release": "B — 3.13.0: onedrive ACL provisioning (M365 group all-members + collaborator grants), per-adapter helper binary selection, setupresp/localcfgtrunc/pkcerestart/memberlicense reliability bundle, trunc doc-audit close.",
+      "_release": "C — 3.18.0: org-backend distribution. Members read adapter/marketplace/listings/collections + the helper binary from the org backend's /shared/dist/ (manifest.json is the version authority), never from github.com. New clone-script-generator + backend-distribution subroutines; create-org/apply-updates/member-bootstrap rewired; standards.md backend-first. GitHub demoted to admin/deprecated fallback. Adapter unchanged (2.2.1). Gates customer B.",
       "name": "agent-index-core",
       "display_name": "Agent-Index Core",
       "description": "The foundational collection: session bootstrap, member management, org configuration, capability authoring, update orchestration, and the canonical CLAUDE.md template. Required for every agent-index install.",
       "category": "infrastructure",
       "author": "agent-index",
-      "current_version": "3.17.0",
+      "current_version": "3.18.0",
       "agent_index_min_version": "3.0.0",
       "repo_url": "https://github.com/agent-index/agent-index-core",
       "zip_url": "https://github.com/agent-index/agent-index-core/archive/refs/heads/main.zip",
@@ -31,7 +31,7 @@
       "description": "The marketplace integration collection: discover, download, and install marketplace collections; check for updates across all installed pieces; refresh the marketplace cache.",
       "category": "infrastructure",
       "author": "agent-index",
-      "current_version": "2.12.0",
+      "current_version": "2.13.0",
       "agent_index_min_version": "3.0.0",
       "repo_url": "https://github.com/agent-index/agent-index-marketplace",
       "zip_url": "https://github.com/agent-index/agent-index-marketplace/archive/refs/heads/main.zip",
