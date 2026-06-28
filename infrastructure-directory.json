@@ -1,5 +1,5 @@
 {
-  "directory_version": "1.15.0",
+  "directory_version": "1.16.0",
   "last_updated": "2026-06-27",
   "infrastructure": [
     {
@@ -9,7 +9,7 @@
       "description": "The foundational collection: session bootstrap, member management, org configuration, capability authoring, update orchestration, and the canonical CLAUDE.md template. Required for every agent-index install.",
       "category": "infrastructure",
       "author": "agent-index",
-      "current_version": "3.20.0",
+      "current_version": "3.21.0",
       "agent_index_min_version": "3.0.0",
       "repo_url": "https://github.com/agent-index/agent-index-core",
       "zip_url": "https://github.com/agent-index/agent-index-core/archive/refs/heads/main.zip",
