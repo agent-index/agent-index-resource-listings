@@ -1,5 +1,5 @@
 {
-  "directory_version": "1.12.0",
+  "directory_version": "1.13.0",
   "last_updated": "2026-06-26",
   "collections": [
     {
@@ -147,7 +147,7 @@
       "description": "Unified development experience for building, evolving, and shipping agent-index collections \u2014 from first idea through marketplace submission. Includes the release task (ship-side push+tag generator) and the release-checklist reference.",
       "category": "developer-tools",
       "author": "agent-index",
-      "current_version": "1.7.0",
+      "current_version": "1.7.1",
       "agent_index_min_version": "3.9.0",
       "repo_url": "https://github.com/agent-index/agent-index-marketplace-developer",
       "zip_url": "https://github.com/agent-index/agent-index-marketplace-developer/archive/refs/heads/main.zip",
