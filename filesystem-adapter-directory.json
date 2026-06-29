@@ -1,13 +1,13 @@
 {
-  "directory_version": "2.9.0",
-  "last_updated": "2026-06-21",
+  "directory_version": "2.10.0",
+  "last_updated": "2026-06-29",
   "adapters": [
     {
       "backend_id": "gdrive",
       "display_name": "Google Drive",
       "description": "Google Drive and Shared Drives. Supports personal and organizational drives with OAuth2 per-member authentication.",
       "author": "agent-index",
-      "current_version": "2.6.0",
+      "current_version": "2.7.0",
       "contract_version": "2.0.0",
       "core_min_version": "1.0.0",
       "auth_method": "oauth2",
@@ -21,7 +21,7 @@
       "display_name": "Microsoft OneDrive / SharePoint",
       "description": "Microsoft OneDrive and SharePoint document libraries. Uses Microsoft Graph API with single-tenant public-client (PKCE, no secret) per-member authentication. Full contract-2.0 parity (Release B): core ops + ACL ops share/unshare/getPermissions/search (additive grants only; inherit:false deprecated) + transferOwnership NOT_IMPLEMENTED.",
       "author": "agent-index",
-      "current_version": "2.3.0",
+      "current_version": "2.4.0",
       "contract_version": "2.0.0",
       "core_min_version": "1.0.0",
       "auth_method": "oauth2",
