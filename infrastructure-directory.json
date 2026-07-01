@@ -1,15 +1,15 @@
 {
-  "directory_version": "1.21.0",
-  "last_updated": "2026-06-29",
+  "directory_version": "1.22.0",
+  "last_updated": "2026-07-01",
   "infrastructure": [
     {
-      "_release": "C.1 — 3.19.0: GitHub-free install orchestration + signed cross-platform helper. create-org makes ZERO GitHub calls — two host scripts (infra clone via ls-remote tag discovery + backend-matched signed binary; then a collection-selection interview reading the freshly-cloned catalog; then a collections clone). Fixes ms-install-7: wrong-backend binary, stale version pins, silent main fallback, PowerShell script failures, large-binary mount-stale publish, loggap-on-resume. Helper binary 0.6.0 is code-signed (Windows Authenticode/Trusted Signing; macOS Developer ID + notarized .app) — fixes Smart App Control hard-block (20260626-8d20ea22-2) and macOS .app registration (20260626-8d20ea22). Per-platform post_install (darwin installs the .app, never --register on a bare binary). Gates customer B.",
+      "_release": "C.1.3.5 — 3.22.5: mitmcadefer. apply-updates Phase 3 (adapter bundle) no longer defers the bundle update on the expected [aifs] Proxy detected sandbox-proxy CA notice; bundle integrity is codified as required steps — SHA-256 checksum gate vs the backend adapter.json exec_bundle_checksum, embedded-URL/domain scan, and a post-install aifs_auth_status smoke test (all fail-loud). Only the unwarranted deferral is removed. Pairs with gdrive adapter 2.8.0 (M2 durable read-back). Closes 20260630-8d20ea22-mitmcadefer.",
       "name": "agent-index-core",
       "display_name": "Agent-Index Core",
       "description": "The foundational collection: session bootstrap, member management, org configuration, capability authoring, update orchestration, and the canonical CLAUDE.md template. Required for every agent-index install.",
       "category": "infrastructure",
       "author": "agent-index",
-      "current_version": "3.22.4",
+      "current_version": "3.22.5",
       "agent_index_min_version": "3.0.0",
       "repo_url": "https://github.com/agent-index/agent-index-core",
       "zip_url": "https://github.com/agent-index/agent-index-core/archive/refs/heads/main.zip",
@@ -23,7 +23,7 @@
         "member-bootstrap",
         "update-orchestration"
       ],
-      "last_updated": "2026-06-12"
+      "last_updated": "2026-07-01"
     },
     {
       "name": "agent-index-marketplace",
@@ -127,12 +127,44 @@
       "_signing_values": "unsigned-bypass = intentionally unsigned while code-signing certs are pending (Windows SAC will block; testers use SAC Evaluation mode, SIGNING.md). Flip to 'trusted' ONLY with a signed+notarized build, and BUMP current_version at the same time so members re-pull the signed bytes (apply-updates no-ops on an unchanged version).",
       "release_url_template": "https://github.com/agent-index/agent-index-permissions-binaries/releases/download/v{version}/{filename}",
       "platforms": [
-        { "os": "windows", "arch": "amd64", "filename": "agent-index-show-plan-onedrive-{version}-windows-amd64.exe", "sha256": "b2e42b24cdb675dd5674ac2873719ac89e0653fedd657f11dd8685a8371a778f" },
-        { "os": "windows", "arch": "arm64", "filename": "agent-index-show-plan-onedrive-{version}-windows-arm64.exe", "sha256": "d46d122128e283a76749b5f48d2e205dd66b5c16673bbadc61c029830d642a6a" },
-        { "os": "darwin", "arch": "amd64", "filename": "agent-index-show-plan-onedrive-{version}-darwin-amd64", "app_filename": "Agent-Index-Helper-{version}-darwin-amd64.app.zip", "sha256": "f30d96d94da4b9d509816d212a23b6ab0d3d7a7ef5ecbbf00f48dff2c4f3dcb6" },
-        { "os": "darwin", "arch": "arm64", "filename": "agent-index-show-plan-onedrive-{version}-darwin-arm64", "app_filename": "Agent-Index-Helper-{version}-darwin-arm64.app.zip", "sha256": "d59c214b6e223b33a779545071d90719d99d0578036c7678a0f48e03d667c005" },
-        { "os": "linux", "arch": "amd64", "filename": "agent-index-show-plan-onedrive-{version}-linux-amd64", "sha256": "ea05f9968cf9836889380605fa4fefc2e2ec4bfd231d4f05abe3294801b09f33" },
-        { "os": "linux", "arch": "arm64", "filename": "agent-index-show-plan-onedrive-{version}-linux-arm64", "sha256": "673b84981b098ee0e1de828db26006c3fb701471173fc8d2e67db6919fae13a0" }
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "agent-index-show-plan-onedrive-{version}-windows-amd64.exe",
+          "sha256": "b2e42b24cdb675dd5674ac2873719ac89e0653fedd657f11dd8685a8371a778f"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "agent-index-show-plan-onedrive-{version}-windows-arm64.exe",
+          "sha256": "d46d122128e283a76749b5f48d2e205dd66b5c16673bbadc61c029830d642a6a"
+        },
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "agent-index-show-plan-onedrive-{version}-darwin-amd64",
+          "app_filename": "Agent-Index-Helper-{version}-darwin-amd64.app.zip",
+          "sha256": "f30d96d94da4b9d509816d212a23b6ab0d3d7a7ef5ecbbf00f48dff2c4f3dcb6"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "agent-index-show-plan-onedrive-{version}-darwin-arm64",
+          "app_filename": "Agent-Index-Helper-{version}-darwin-arm64.app.zip",
+          "sha256": "d59c214b6e223b33a779545071d90719d99d0578036c7678a0f48e03d667c005"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "agent-index-show-plan-onedrive-{version}-linux-amd64",
+          "sha256": "ea05f9968cf9836889380605fa4fefc2e2ec4bfd231d4f05abe3294801b09f33"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "agent-index-show-plan-onedrive-{version}-linux-arm64",
+          "sha256": "673b84981b098ee0e1de828db26006c3fb701471173fc8d2e67db6919fae13a0"
+        }
       ],
       "install_destination": "mcp-servers/permission-helper-go/agent-index-show-plan{ext}",
       "post_install": {
