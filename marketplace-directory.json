@@ -1,6 +1,6 @@
 {
-  "directory_version": "1.16.0",
-  "last_updated": "2026-07-08",
+  "directory_version": "1.17.0",
+  "last_updated": "2026-07-10",
   "collections": [
     {
       "name": "projects",
@@ -223,9 +223,9 @@
       "description": "Hierarchical documentation library — a Confluence replacement. Named groups with unlimited-depth sub-groups form an always-org-public taxonomy; document titles and tree placement are visible to every member while content is org-public by default or private (owner + explicit grants, content in the owner's My Drive) — settable at any time including creation. Discovery runs off an always-public catalog (tree, per-doc pointers, doc-types) decoupled from content ACLs, so private docs still appear as titles; rich retrieval metadata is indexed for public docs only and stripped when a doc goes private. Governed doc-type vocabulary (admin locked/open), staleness/review tracking (180-day default), comms-channel access requests. Reuses the projects 4.0 two-tier + pointer-index patterns.",
       "category": "knowledge-management",
       "author": "agent-index",
-      "current_version": "1.3.0",
+      "current_version": "1.4.0",
       "agent_index_min_version": "3.9.0",
-      "last_updated": "2026-07-08",
+      "last_updated": "2026-07-10",
       "repo_url": "https://github.com/agent-index/agent-index-marketplace-library",
       "zip_url": "https://github.com/agent-index/agent-index-marketplace-library/archive/refs/heads/main.zip",
       "license": "open",
