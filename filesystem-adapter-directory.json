@@ -1,5 +1,5 @@
 {
-  "directory_version": "2.18.0",
+  "directory_version": "2.19.0",
   "last_updated": "2026-07-12",
   "adapters": [
     {
@@ -7,7 +7,7 @@
       "display_name": "Google Drive",
       "description": "Google Drive and Shared Drives. Supports personal and organizational drives with OAuth2 per-member authentication.",
       "author": "agent-index",
-      "current_version": "2.11.0",
+      "current_version": "2.11.1",
       "contract_version": "2.0.0",
       "core_min_version": "1.0.0",
       "auth_method": "oauth2",
