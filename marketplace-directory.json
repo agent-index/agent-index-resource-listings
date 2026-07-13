@@ -1,6 +1,6 @@
 {
-  "directory_version": "1.18.0",
-  "last_updated": "2026-07-12",
+  "directory_version": "1.19.0",
+  "last_updated": "2026-07-13",
   "collections": [
     {
       "name": "projects",
@@ -31,7 +31,7 @@
       "description": "Build, evaluate, and evolve named strategies. Define canonical strategy references, configure information sources, run briefings that surface opportunities, and maintain a prioritized opportunity registry — private by default, shared per-person from your own member space (readers, collaborators, or org-wide read) with discovery via a pointer index.",
       "category": "strategy",
       "author": "agent-index",
-      "current_version": "1.1.4",
+      "current_version": "1.2.0",
       "agent_index_min_version": "3.9.0",
       "last_updated": "2026-06-06",
       "repo_url": "https://github.com/agent-index/agent-index-marketplace-strategy",
@@ -147,7 +147,7 @@
       "description": "Unified development experience for building, evolving, and shipping agent-index collections — from first idea through marketplace submission. Includes the release task (ship-side push+tag generator) and the release-checklist reference.",
       "category": "developer-tools",
       "author": "agent-index",
-      "current_version": "1.8.0",
+      "current_version": "1.9.0",
       "agent_index_min_version": "3.9.0",
       "repo_url": "https://github.com/agent-index/agent-index-marketplace-developer",
       "zip_url": "https://github.com/agent-index/agent-index-marketplace-developer/archive/refs/heads/main.zip",
@@ -162,7 +162,7 @@
         "development"
       ],
       "featured": false,
-      "last_updated": "2026-07-01"
+      "last_updated": "2026-07-13"
     },
     {
       "name": "client-intelligence",
@@ -170,7 +170,7 @@
       "description": "Primary repository of client-level knowledge. Admins author named templates; members create client instances from them. v2.0.0 two-tier model: clients are private by default (member's own My Drive, owner-applied per-person sharing) or org-public (org commons, uniform collaborative access with changelog attribution); a universal visibility floor keeps every client's name and owner org-discoverable via the pointer index. New transition-client task moves clients between tiers. MAJOR upgrade from 1.x — see upgrade/1-to-2.md (gated-instance review required before provisioning).",
       "category": "client-management",
       "author": "agent-index",
-      "current_version": "2.2.0",
+      "current_version": "2.3.0",
       "agent_index_min_version": "3.9.0",
       "repo_url": "https://github.com/agent-index/agent-index-marketplace-client-intelligence",
       "zip_url": "https://github.com/agent-index/agent-index-marketplace-client-intelligence/archive/refs/heads/main.zip",
