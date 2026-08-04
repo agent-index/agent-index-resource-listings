@@ -1,6 +1,6 @@
 {
-  "directory_version": "1.21.0",
-  "last_updated": "2026-07-23",
+  "directory_version": "1.22.0",
+  "last_updated": "2026-07-28",
   "collections": [
     {
       "name": "projects",
@@ -8,7 +8,7 @@
       "description": "Full project lifecycle management — create projects with structured briefs, track ideas from private exploration to actionable artifacts, manage action items with dependency chains, record decisions, monitor comms channels, and generate status reports. v4.0.0 two-tier model: projects org-public by default (commons, attributed writes) or private (owner's My Drive, invisible until shared; roster = grants); ideas private-and-invisible by default with share/promote/unshare; artifacts inherit parent access structurally; transition-project moves tiers; pointer-index discovery. MAJOR — see upgrade/3-to-4.md (inventory + gated-idea review before provisioning).",
       "category": "project-management",
       "author": "agent-index",
-      "current_version": "4.1.0",
+      "current_version": "4.2.0",
       "agent_index_min_version": "3.9.0",
       "repo_url": "https://github.com/agent-index/agent-index-marketplace-projects",
       "zip_url": "https://github.com/agent-index/agent-index-marketplace-projects/archive/refs/heads/main.zip",
