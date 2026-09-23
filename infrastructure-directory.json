@@ -1,15 +1,15 @@
 {
-  "directory_version": "1.36.0",
+  "directory_version": "1.37.0",
   "last_updated": "2026-09-22",
   "infrastructure": [
     {
-      "_release": "3.29.0: apps/ materialization. Collections that ship an apps/ directory now have it copied to members/{member_hash}/installed/{collection}/apps/ at install and kept current by apply-updates; before this nothing put apps/ on a member machine at all, so every {apps_path} invocation failed silently. Introduces the core-injected parameter concept (apps_path is the first), makes /apps/ placement normative in standards.md, and promotes the member-data placement rule to normative. Additive for collections that ship no apps/. CURRENT_SUBROUTINE_REVISION 4 -> 5 so existing members receive apps/ on their next @ai:update.",
+      "_release": "3.29.1: apps/ materialization, completed. 3.29.0 copies a collection's bundled apps/ directory to members/{member_hash}/installed/{collection}/apps/ at install and keeps it current via apply-updates, and introduces the core-injected parameter concept (apps_path). 3.29.1 closes the migration-path half: 3.29.0 materialized the scripts for existing members but never recorded apps_path for them, so the files arrived un-addressable. apply-updates step 5b now writes it, and CURRENT_SUBROUTINE_REVISION 5 -> 6 forces the re-sweep that delivers it. Additive for collections that ship no apps/.",
       "name": "agent-index-core",
       "display_name": "Agent-Index Core",
       "description": "The foundational collection: session bootstrap, member management, org configuration, capability authoring, update orchestration, and the canonical CLAUDE.md template. Required for every agent-index install.",
       "category": "infrastructure",
       "author": "agent-index",
-      "current_version": "3.29.0",
+      "current_version": "3.29.1",
       "agent_index_min_version": "3.0.0",
       "repo_url": "https://github.com/agent-index/agent-index-core",
       "zip_url": "https://github.com/agent-index/agent-index-core/archive/refs/heads/main.zip",
