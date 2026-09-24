@@ -1,15 +1,15 @@
 {
-  "directory_version": "1.38.0",
-  "last_updated": "2026-09-22",
+  "directory_version": "1.39.0",
+  "last_updated": "2026-09-23",
   "infrastructure": [
     {
-      "_release": "3.29.2: apps/ materialization, corrected. Collections shipping an apps/ directory have it copied to members/{member_hash}/installed/{collection}/apps/ at install and kept current by apply-updates, addressed through the core-injected apps_path. 3.29.1 recorded that parameter for existing installs; 3.29.2 fixes its stored form - absolute paths captured the agent's per-session Cowork sandbox mount, so the record named a location that did not exist on the member's machine. Now stored relative to project_dir and resolved to absolute at invocation; collection workflows are unaffected. CURRENT_SUBROUTINE_REVISION 6 -> 7 forces the re-sweep that overwrites stale values.",
+      "_release": "3.30.0: multi-marketplace. An org may subscribe to more than one marketplace catalog. standards.md 2.5.0 separates catalog identity (declared by the catalog), subscriptions (org-config marketplaces[], admin-only, managed in @ai:edit-org) and provenance (installed_collections[].marketplace_id, written at install, survives unsubscription, null = sideloaded). Private catalogs reserve a hyphen namespace prefix and cannot shadow public collections; no priority/pinning by design. publish-updates back-fills existing orgs with no behaviour change. Pairs with marketplace 2.20.0.",
       "name": "agent-index-core",
       "display_name": "Agent-Index Core",
       "description": "The foundational collection: session bootstrap, member management, org configuration, capability authoring, update orchestration, and the canonical CLAUDE.md template. Required for every agent-index install.",
       "category": "infrastructure",
       "author": "agent-index",
-      "current_version": "3.29.2",
+      "current_version": "3.30.0",
       "agent_index_min_version": "3.0.0",
       "repo_url": "https://github.com/agent-index/agent-index-core",
       "zip_url": "https://github.com/agent-index/agent-index-core/archive/refs/heads/main.zip",
@@ -26,12 +26,13 @@
       "last_updated": "2026-09-22"
     },
     {
+      "_release": "2.20.0: multi-marketplace consumer side. Catalog reads go through one resolver that reads every enabled subscription, verifies catalog identity and namespaces, and fails loudly on an unreadable source unless skip_if_unavailable is set. download-collection records marketplace_id; check-updates compares each collection against its own origin catalog and no longer reads the decommissioned /shared/marketplace-cache/. Requires core 3.30.0.",
       "name": "agent-index-marketplace",
       "display_name": "Agent-Index Marketplace",
       "description": "The marketplace integration collection: discover, download, and install marketplace collections; check for updates across all installed pieces; refresh the marketplace cache.",
       "category": "infrastructure",
       "author": "agent-index",
-      "current_version": "2.19.2",
+      "current_version": "2.20.0",
       "agent_index_min_version": "3.0.0",
       "repo_url": "https://github.com/agent-index/agent-index-marketplace",
       "zip_url": "https://github.com/agent-index/agent-index-marketplace/archive/refs/heads/main.zip",
