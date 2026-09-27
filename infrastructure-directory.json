@@ -1,15 +1,15 @@
 {
-  "directory_version": "1.39.0",
-  "last_updated": "2026-09-23",
+  "directory_version": "1.40.0",
+  "last_updated": "2026-09-27",
   "infrastructure": [
     {
-      "_release": "3.30.0: multi-marketplace. An org may subscribe to more than one marketplace catalog. standards.md 2.5.0 separates catalog identity (declared by the catalog), subscriptions (org-config marketplaces[], admin-only, managed in @ai:edit-org) and provenance (installed_collections[].marketplace_id, written at install, survives unsubscription, null = sideloaded). Private catalogs reserve a hyphen namespace prefix and cannot shadow public collections; no priority/pinning by design. publish-updates back-fills existing orgs with no behaviour change. Pairs with marketplace 2.20.0.",
+      "_release": "3.31.0: multi-marketplace collision rules relaxed. Collection names must be unique across subscribed catalogs; namespaces are optional reservations that stop other catalogs using a prefix but no longer restrict a catalog's own entries, so a private catalog can hold collections under any names. publish-updates builds the dist manifest's collection versions from what the org has installed, never from catalog versions. Pairs with marketplace 2.21.0.",
       "name": "agent-index-core",
       "display_name": "Agent-Index Core",
       "description": "The foundational collection: session bootstrap, member management, org configuration, capability authoring, update orchestration, and the canonical CLAUDE.md template. Required for every agent-index install.",
       "category": "infrastructure",
       "author": "agent-index",
-      "current_version": "3.30.0",
+      "current_version": "3.31.0",
       "agent_index_min_version": "3.0.0",
       "repo_url": "https://github.com/agent-index/agent-index-core",
       "zip_url": "https://github.com/agent-index/agent-index-core/archive/refs/heads/main.zip",
@@ -26,13 +26,13 @@
       "last_updated": "2026-09-22"
     },
     {
-      "_release": "2.20.0: multi-marketplace consumer side. Catalog reads go through one resolver that reads every enabled subscription, verifies catalog identity and namespaces, and fails loudly on an unreadable source unless skip_if_unavailable is set. download-collection records marketplace_id; check-updates compares each collection against its own origin catalog and no longer reads the decommissioned /shared/marketplace-cache/. Requires core 3.30.0.",
+      "_release": "2.21.0: catalog resolver enforces unique names across catalogs instead of per-catalog prefixes. Conflicts and prefix intrusions affect only the names involved; new installs refuse a conflicted name, while update checks and upgrades keep tracking each collection's origin catalog. Requires core 3.31.0.",
       "name": "agent-index-marketplace",
       "display_name": "Agent-Index Marketplace",
       "description": "The marketplace integration collection: discover, download, and install marketplace collections; check for updates across all installed pieces; refresh the marketplace cache.",
       "category": "infrastructure",
       "author": "agent-index",
-      "current_version": "2.20.0",
+      "current_version": "2.21.0",
       "agent_index_min_version": "3.0.0",
       "repo_url": "https://github.com/agent-index/agent-index-marketplace",
       "zip_url": "https://github.com/agent-index/agent-index-marketplace/archive/refs/heads/main.zip",
