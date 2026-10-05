@@ -1,15 +1,15 @@
 {
-  "directory_version": "1.40.0",
-  "last_updated": "2026-09-27",
+  "directory_version": "1.41.0",
+  "last_updated": "2026-10-02",
   "infrastructure": [
     {
-      "_release": "3.31.0: multi-marketplace collision rules relaxed. Collection names must be unique across subscribed catalogs; namespaces are optional reservations that stop other catalogs using a prefix but no longer restrict a catalog's own entries, so a private catalog can hold collections under any names. publish-updates builds the dist manifest's collection versions from what the org has installed, never from catalog versions. Pairs with marketplace 2.21.0.",
+      "_release": "3.32.0: permission changes move to one core procedure (list, confirm, apply, verify) with no helper binary needed; core tasks use it now, collections follow in their own releases; the permission-change-helper is deprecated and removed in 4.0.0.",
       "name": "agent-index-core",
       "display_name": "Agent-Index Core",
       "description": "The foundational collection: session bootstrap, member management, org configuration, capability authoring, update orchestration, and the canonical CLAUDE.md template. Required for every agent-index install.",
       "category": "infrastructure",
       "author": "agent-index",
-      "current_version": "3.31.0",
+      "current_version": "3.32.0",
       "agent_index_min_version": "3.0.0",
       "repo_url": "https://github.com/agent-index/agent-index-core",
       "zip_url": "https://github.com/agent-index/agent-index-core/archive/refs/heads/main.zip",
@@ -23,17 +23,17 @@
         "member-bootstrap",
         "update-orchestration"
       ],
-      "last_updated": "2026-09-22"
+      "last_updated": "2026-10-01"
     },
     {
-      "_release": "2.21.0: catalog resolver enforces unique names across catalogs instead of per-catalog prefixes. Conflicts and prefix intrusions affect only the names involved; new installs refuse a conflicted name, while update checks and upgrades keep tracking each collection's origin catalog. Requires core 3.31.0.",
+      "_release": "2.22.0: install-collection provisions collection access through the core permission-changes procedure (admin confirms the exact changes, no helper binary) and accepts the legacy grants[] key; requires core 3.32.0.",
       "name": "agent-index-marketplace",
       "display_name": "Agent-Index Marketplace",
       "description": "The marketplace integration collection: discover, download, and install marketplace collections; check for updates across all installed pieces; refresh the marketplace cache.",
       "category": "infrastructure",
       "author": "agent-index",
-      "current_version": "2.21.0",
-      "agent_index_min_version": "3.0.0",
+      "current_version": "2.22.0",
+      "agent_index_min_version": "3.32.0",
       "repo_url": "https://github.com/agent-index/agent-index-marketplace",
       "zip_url": "https://github.com/agent-index/agent-index-marketplace/archive/refs/heads/main.zip",
       "license": "proprietary",
@@ -44,14 +44,14 @@
         "installation",
         "update-checking"
       ],
-      "last_updated": "2026-07-13"
+      "last_updated": "2026-10-02"
     }
   ],
   "binaries": [
     {
       "name": "permission-helper-go",
       "display_name": "Permission Change Helper (Google Drive)",
-      "description": "Native binary that reviews and applies permission changes via a one-click localhost browser flow. Registered as the agent-index:// URL scheme handler so chat-side links route directly to it. gdrive build (embeds the Drive API). apply-updates installs the binary whose `backend` matches the org's remote_filesystem.backend, to the shared install_destination.",
+      "description": "DEPRECATED in agent-index-core 3.32.0 (permission changes now go through the core permission-changes procedure); kept only for collections not yet moved; removed in 4.0.0. Native binary that reviews and applies permission changes via a one-click localhost browser flow. Registered as the agent-index:// URL scheme handler so chat-side links route directly to it. gdrive build (embeds the Drive API). apply-updates installs the binary whose `backend` matches the org's remote_filesystem.backend, to the shared install_destination.",
       "category": "binary",
       "backend": "gdrive",
       "author": "agent-index",
@@ -118,7 +118,7 @@
     {
       "name": "permission-helper-go-onedrive",
       "display_name": "Permission Change Helper (OneDrive / SharePoint)",
-      "description": "OneDrive/SharePoint build of the permission helper (embeds Microsoft Graph; shares the Go core with the gdrive build). Release B. apply-updates installs this binary ONLY when the org's remote_filesystem.backend is 'onedrive', to the shared install_destination — so the helper skill, invite-member, etc. reference the same path regardless of backend. Additive grants only; transferOwnership returns NOT_IMPLEMENTED.",
+      "description": "DEPRECATED in agent-index-core 3.32.0 (permission changes now go through the core permission-changes procedure); kept only for collections not yet moved; removed in 4.0.0. OneDrive/SharePoint build of the permission helper (embeds Microsoft Graph; shares the Go core with the gdrive build). Release B. apply-updates installs this binary ONLY when the org's remote_filesystem.backend is 'onedrive', to the shared install_destination — so the helper skill, invite-member, etc. reference the same path regardless of backend. Additive grants only; transferOwnership returns NOT_IMPLEMENTED.",
       "category": "binary",
       "backend": "onedrive",
       "author": "agent-index",

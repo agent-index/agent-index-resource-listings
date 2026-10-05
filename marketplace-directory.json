@@ -2,8 +2,8 @@
   "marketplace_id": "agent-index-public",
   "display_name": "Agent Index Marketplace",
   "namespace": null,
-  "directory_version": "1.28.0",
-  "last_updated": "2026-09-30",
+  "directory_version": "1.29.0",
+  "last_updated": "2026-10-02",
   "collections": [
     {
       "name": "projects",
@@ -11,8 +11,8 @@
       "description": "Full project lifecycle management — create projects with structured briefs, track ideas from private exploration to actionable artifacts, manage action items with dependency chains, record decisions, monitor comms channels, and generate status reports. v4.0.0 two-tier model: projects org-public by default (commons, attributed writes) or private (owner's My Drive, invisible until shared; roster = grants); ideas private-and-invisible by default with share/promote/unshare; artifacts inherit parent access structurally; transition-project moves tiers; pointer-index discovery. MAJOR — see upgrade/3-to-4.md (inventory + gated-idea review before provisioning).",
       "category": "project-management",
       "author": "agent-index",
-      "current_version": "4.3.0",
-      "agent_index_min_version": "3.9.0",
+      "current_version": "4.4.0",
+      "agent_index_min_version": "3.32.0",
       "repo_url": "https://github.com/agent-index/agent-index-marketplace-projects",
       "zip_url": "https://github.com/agent-index/agent-index-marketplace-projects/archive/refs/heads/main.zip",
       "license": "proprietary",
@@ -34,9 +34,9 @@
       "description": "Build, evaluate, and evolve named strategies. Define canonical strategy references, configure information sources, run briefings that surface opportunities, and maintain a prioritized opportunity registry — private by default, shared per-person from your own member space (readers, collaborators, or org-wide read) with discovery via a pointer index.",
       "category": "strategy",
       "author": "agent-index",
-      "current_version": "1.2.0",
-      "agent_index_min_version": "3.9.0",
-      "last_updated": "2026-06-06",
+      "current_version": "1.3.0",
+      "agent_index_min_version": "3.32.0",
+      "last_updated": "2026-10-02",
       "repo_url": "https://github.com/agent-index/agent-index-marketplace-strategy",
       "zip_url": "https://github.com/agent-index/agent-index-marketplace-strategy/archive/refs/heads/main.zip",
       "license": "proprietary",
@@ -128,7 +128,7 @@
       "description": "Bug reporting workflow — any member can submit and update their own bugs, org admins can review, triage, and forward selected reports to the agent-index log collection server.",
       "category": "developer-tools",
       "author": "agent-index",
-      "current_version": "1.3.2",
+      "current_version": "1.3.3",
       "agent_index_min_version": "3.0.0",
       "repo_url": "https://github.com/agent-index/agent-index-marketplace-bug-reports",
       "zip_url": "https://github.com/agent-index/agent-index-marketplace-bug-reports/archive/refs/heads/main.zip",
@@ -142,7 +142,7 @@
         "quality"
       ],
       "featured": false,
-      "last_updated": "2026-06-06"
+      "last_updated": "2026-10-02"
     },
     {
       "name": "developer",
@@ -150,7 +150,7 @@
       "description": "Unified development experience for building, evolving, and shipping agent-index collections — from first idea through marketplace submission. Includes the release task (ship-side push+tag generator) and the release-checklist reference.",
       "category": "developer-tools",
       "author": "agent-index",
-      "current_version": "1.13.0",
+      "current_version": "1.14.0",
       "agent_index_min_version": "3.9.0",
       "repo_url": "https://github.com/agent-index/agent-index-marketplace-developer",
       "zip_url": "https://github.com/agent-index/agent-index-marketplace-developer/archive/refs/heads/main.zip",
@@ -165,7 +165,7 @@
         "development"
       ],
       "featured": false,
-      "last_updated": "2026-07-13"
+      "last_updated": "2026-10-01"
     },
     {
       "name": "client-intelligence",
@@ -173,8 +173,8 @@
       "description": "Primary repository of client-level knowledge. Admins author named templates; members create client instances from them. v2.0.0 two-tier model: clients are private by default (member's own My Drive, owner-applied per-person sharing) or org-public (org commons, uniform collaborative access with changelog attribution); a universal visibility floor keeps every client's name and owner org-discoverable via the pointer index. New transition-client task moves clients between tiers. MAJOR upgrade from 1.x — see upgrade/1-to-2.md (gated-instance review required before provisioning).",
       "category": "client-management",
       "author": "agent-index",
-      "current_version": "2.3.0",
-      "agent_index_min_version": "3.9.0",
+      "current_version": "2.4.0",
+      "agent_index_min_version": "3.32.0",
       "repo_url": "https://github.com/agent-index/agent-index-marketplace-client-intelligence",
       "zip_url": "https://github.com/agent-index/agent-index-marketplace-client-intelligence/archive/refs/heads/main.zip",
       "license": "open",
@@ -187,7 +187,7 @@
         "visibility-floor"
       ],
       "featured": false,
-      "last_updated": "2026-06-17",
+      "last_updated": "2026-10-02",
       "requires_capabilities": [
         {
           "capability": "brand-book",
@@ -201,8 +201,8 @@
       "description": "Org brand identity as a service — design tokens, voice, display elements, and artifact templates with counterparty slots. Registers as the brand-book capability provider; artifact-producing collections inherit consistent form, function, and UI.",
       "category": "design",
       "author": "agent-index",
-      "current_version": "1.1.0",
-      "agent_index_min_version": "3.10.0",
+      "current_version": "1.2.0",
+      "agent_index_min_version": "3.32.0",
       "repo_url": "https://github.com/agent-index/agent-index-marketplace-brand-book",
       "zip_url": "https://github.com/agent-index/agent-index-marketplace-brand-book/archive/refs/heads/main.zip",
       "license": "open",
@@ -214,7 +214,7 @@
         "artifacts"
       ],
       "featured": false,
-      "last_updated": "2026-06-17",
+      "last_updated": "2026-10-02",
       "provides_capabilities": [
         "brand-book"
       ],
@@ -226,9 +226,9 @@
       "description": "Hierarchical documentation library — a Confluence replacement. Named groups with unlimited-depth sub-groups form an always-org-public taxonomy; document titles and tree placement are visible to every member while content is org-public by default or private (owner + explicit grants, content in the owner's My Drive) — settable at any time including creation. Discovery runs off an always-public catalog (tree, per-doc pointers, doc-types) decoupled from content ACLs, so private docs still appear as titles; rich retrieval metadata is indexed for public docs only and stripped when a doc goes private. Governed doc-type vocabulary (admin locked/open), staleness/review tracking (180-day default), comms-channel access requests. Reuses the projects 4.0 two-tier + pointer-index patterns.",
       "category": "knowledge-management",
       "author": "agent-index",
-      "current_version": "1.6.1",
-      "agent_index_min_version": "3.9.0",
-      "last_updated": "2026-07-12",
+      "current_version": "1.7.0",
+      "agent_index_min_version": "3.32.0",
+      "last_updated": "2026-10-02",
       "repo_url": "https://github.com/agent-index/agent-index-marketplace-library",
       "zip_url": "https://github.com/agent-index/agent-index-marketplace-library/archive/refs/heads/main.zip",
       "license": "open",
