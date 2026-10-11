@@ -1,15 +1,15 @@
 {
-  "directory_version": "1.41.0",
-  "last_updated": "2026-10-02",
+  "directory_version": "1.42.0",
+  "last_updated": "2026-10-11",
   "infrastructure": [
     {
-      "_release": "3.32.0: permission changes move to one core procedure (list, confirm, apply, verify) with no helper binary needed; core tasks use it now, collections follow in their own releases; the permission-change-helper is deprecated and removed in 4.0.0.",
+      "_release": "4.0.0 (MAJOR): removes the permission-change-helper; every permission change goes through the core permission-changes procedure. Before publishing, every installed collection must be at its permission-changes release (upgrade/3-to-4.md). 3.x is supported until 2027-01-31.",
       "name": "agent-index-core",
       "display_name": "Agent-Index Core",
       "description": "The foundational collection: session bootstrap, member management, org configuration, capability authoring, update orchestration, and the canonical CLAUDE.md template. Required for every agent-index install.",
       "category": "infrastructure",
       "author": "agent-index",
-      "current_version": "3.32.0",
+      "current_version": "4.0.0",
       "agent_index_min_version": "3.0.0",
       "repo_url": "https://github.com/agent-index/agent-index-core",
       "zip_url": "https://github.com/agent-index/agent-index-core/archive/refs/heads/main.zip",
@@ -23,7 +23,7 @@
         "member-bootstrap",
         "update-orchestration"
       ],
-      "last_updated": "2026-10-01"
+      "last_updated": "2026-10-11"
     },
     {
       "_release": "2.22.0: install-collection provisions collection access through the core permission-changes procedure (admin confirms the exact changes, no helper binary) and accepts the legacy grants[] key; requires core 3.32.0.",
@@ -45,143 +45,6 @@
         "update-checking"
       ],
       "last_updated": "2026-10-02"
-    }
-  ],
-  "binaries": [
-    {
-      "name": "permission-helper-go",
-      "display_name": "Permission Change Helper (Google Drive)",
-      "description": "DEPRECATED in agent-index-core 3.32.0 (permission changes now go through the core permission-changes procedure); kept only for collections not yet moved; removed in 4.0.0. Native binary that reviews and applies permission changes via a one-click localhost browser flow. Registered as the agent-index:// URL scheme handler so chat-side links route directly to it. gdrive build (embeds the Drive API). apply-updates installs the binary whose `backend` matches the org's remote_filesystem.backend, to the shared install_destination.",
-      "category": "binary",
-      "backend": "gdrive",
-      "author": "agent-index",
-      "current_version": "0.6.0",
-      "min_required_version": "0.6.0",
-      "signing": "unsigned-bypass",
-      "_signing_values": "unsigned-bypass = intentionally unsigned while code-signing certs are pending (Windows SAC will block; testers use SAC Evaluation mode, SIGNING.md). Flip to 'trusted' ONLY with a signed+notarized build, and BUMP current_version at the same time so members re-pull the signed bytes (apply-updates no-ops on an unchanged version).",
-      "release_url_template": "https://github.com/agent-index/agent-index-permissions-binaries/releases/download/v{version}/{filename}",
-      "platforms": [
-        {
-          "os": "windows",
-          "arch": "amd64",
-          "filename": "agent-index-show-plan-{version}-windows-amd64.exe",
-          "sha256": "c7b9d5479307fc5d0bfdb29d7328042d193b97396489a32f7128e777150b5785"
-        },
-        {
-          "os": "windows",
-          "arch": "arm64",
-          "filename": "agent-index-show-plan-{version}-windows-arm64.exe",
-          "sha256": "efd4777c2095b7382e5a23da035583cfbbb3e3fb8d46049d9d73f9a83b483351"
-        },
-        {
-          "os": "darwin",
-          "arch": "amd64",
-          "filename": "agent-index-show-plan-{version}-darwin-amd64",
-          "app_filename": "Agent-Index-Helper-{version}-darwin-amd64.app.zip",
-          "sha256": "d70daade24c840f8f3bf38a3146e075426bb31dceca7995e60826edca6d0a389"
-        },
-        {
-          "os": "darwin",
-          "arch": "arm64",
-          "filename": "agent-index-show-plan-{version}-darwin-arm64",
-          "app_filename": "Agent-Index-Helper-{version}-darwin-arm64.app.zip",
-          "sha256": "b6e10b98310d501d10b0022182bbe32b1190d7108c32e64a3fe044a15d4bfd91"
-        },
-        {
-          "os": "linux",
-          "arch": "amd64",
-          "filename": "agent-index-show-plan-{version}-linux-amd64",
-          "sha256": "235989047eb8f9e585854e974bf19ca1b4f15925b297fdad93cfc5158181a5e5"
-        },
-        {
-          "os": "linux",
-          "arch": "arm64",
-          "filename": "agent-index-show-plan-{version}-linux-arm64",
-          "sha256": "45f65aeb6ad23aa87092126946447da4d9a21b8e972182381dc866fac3245d7f"
-        }
-      ],
-      "install_destination": "mcp-servers/permission-helper-go/agent-index-show-plan{ext}",
-      "post_install": {
-        "windows": "{binary} --register",
-        "linux": "{binary} --register",
-        "darwin": "run the bundled macOS installer (installer/darwin/install.sh {binary}) which places the notarized Agent-Index Helper.app in ~/Applications and registers via lsregister; NEVER run --register on the bare darwin binary (macOS registers bundles, not loose executables — bug 20260626-8d20ea22)"
-      },
-      "post_install_command": "{binary} --register",
-      "post_install_note": "post_install_command is the legacy windows/linux form retained for back-compat; consumers on core 3.19.0+ MUST honor the per-platform post_install object (darwin = .app installer). Assets are code-signed (C.1); the sha256 below pins SIGNED bytes.",
-      "version_file": "mcp-servers/permission-helper-go/version.txt",
-      "tags": [
-        "binary",
-        "permission-helper",
-        "url-handler"
-      ]
-    },
-    {
-      "name": "permission-helper-go-onedrive",
-      "display_name": "Permission Change Helper (OneDrive / SharePoint)",
-      "description": "DEPRECATED in agent-index-core 3.32.0 (permission changes now go through the core permission-changes procedure); kept only for collections not yet moved; removed in 4.0.0. OneDrive/SharePoint build of the permission helper (embeds Microsoft Graph; shares the Go core with the gdrive build). Release B. apply-updates installs this binary ONLY when the org's remote_filesystem.backend is 'onedrive', to the shared install_destination — so the helper skill, invite-member, etc. reference the same path regardless of backend. Additive grants only; transferOwnership returns NOT_IMPLEMENTED.",
-      "category": "binary",
-      "backend": "onedrive",
-      "author": "agent-index",
-      "current_version": "0.6.0",
-      "min_required_version": "0.6.0",
-      "signing": "unsigned-bypass",
-      "_signing_values": "unsigned-bypass = intentionally unsigned while code-signing certs are pending (Windows SAC will block; testers use SAC Evaluation mode, SIGNING.md). Flip to 'trusted' ONLY with a signed+notarized build, and BUMP current_version at the same time so members re-pull the signed bytes (apply-updates no-ops on an unchanged version).",
-      "release_url_template": "https://github.com/agent-index/agent-index-permissions-binaries/releases/download/v{version}/{filename}",
-      "platforms": [
-        {
-          "os": "windows",
-          "arch": "amd64",
-          "filename": "agent-index-show-plan-onedrive-{version}-windows-amd64.exe",
-          "sha256": "b2e42b24cdb675dd5674ac2873719ac89e0653fedd657f11dd8685a8371a778f"
-        },
-        {
-          "os": "windows",
-          "arch": "arm64",
-          "filename": "agent-index-show-plan-onedrive-{version}-windows-arm64.exe",
-          "sha256": "d46d122128e283a76749b5f48d2e205dd66b5c16673bbadc61c029830d642a6a"
-        },
-        {
-          "os": "darwin",
-          "arch": "amd64",
-          "filename": "agent-index-show-plan-onedrive-{version}-darwin-amd64",
-          "app_filename": "Agent-Index-Helper-{version}-darwin-amd64.app.zip",
-          "sha256": "f30d96d94da4b9d509816d212a23b6ab0d3d7a7ef5ecbbf00f48dff2c4f3dcb6"
-        },
-        {
-          "os": "darwin",
-          "arch": "arm64",
-          "filename": "agent-index-show-plan-onedrive-{version}-darwin-arm64",
-          "app_filename": "Agent-Index-Helper-{version}-darwin-arm64.app.zip",
-          "sha256": "d59c214b6e223b33a779545071d90719d99d0578036c7678a0f48e03d667c005"
-        },
-        {
-          "os": "linux",
-          "arch": "amd64",
-          "filename": "agent-index-show-plan-onedrive-{version}-linux-amd64",
-          "sha256": "ea05f9968cf9836889380605fa4fefc2e2ec4bfd231d4f05abe3294801b09f33"
-        },
-        {
-          "os": "linux",
-          "arch": "arm64",
-          "filename": "agent-index-show-plan-onedrive-{version}-linux-arm64",
-          "sha256": "673b84981b098ee0e1de828db26006c3fb701471173fc8d2e67db6919fae13a0"
-        }
-      ],
-      "install_destination": "mcp-servers/permission-helper-go/agent-index-show-plan{ext}",
-      "post_install": {
-        "windows": "{binary} --register",
-        "linux": "{binary} --register",
-        "darwin": "run the bundled macOS installer (installer/darwin/install.sh {binary}) which places the notarized Agent-Index Helper.app in ~/Applications and registers via lsregister; NEVER run --register on the bare darwin binary (macOS registers bundles, not loose executables — bug 20260626-8d20ea22)"
-      },
-      "post_install_command": "{binary} --register",
-      "post_install_note": "post_install_command is the legacy windows/linux form retained for back-compat; consumers on core 3.19.0+ MUST honor the per-platform post_install object (darwin = .app installer). Assets are code-signed (C.1); the sha256 below pins SIGNED bytes.",
-      "version_file": "mcp-servers/permission-helper-go/version.txt",
-      "tags": [
-        "binary",
-        "permission-helper",
-        "url-handler",
-        "onedrive"
-      ]
     }
   ]
 }
