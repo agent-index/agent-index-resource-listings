@@ -1,6 +1,6 @@
 {
-  "directory_version": "1.42.0",
-  "last_updated": "2026-10-11",
+  "directory_version": "1.43.0",
+  "last_updated": "2026-10-12",
   "infrastructure": [
     {
       "_release": "4.0.0 (MAJOR): removes the permission-change-helper; every permission change goes through the core permission-changes procedure. Before publishing, every installed collection must be at its permission-changes release (upgrade/3-to-4.md). 3.x is supported until 2027-01-31.",
@@ -26,13 +26,13 @@
       "last_updated": "2026-10-11"
     },
     {
-      "_release": "2.22.0: install-collection provisions collection access through the core permission-changes procedure (admin confirms the exact changes, no helper binary) and accepts the legacy grants[] key; requires core 3.32.0.",
+      "_release": "2.22.1: upgrade-collection writes update-log entries with operations[] (members receive same-version collection changes); install-collection refuses collections that still use the removed permission helper and never resets seed data on Reconfigure. 2.22.0: install-collection provisions collection access through the core permission-changes procedure (admin confirms the exact changes, no helper binary) and accepts the legacy grants[] key; requires core 3.32.0.",
       "name": "agent-index-marketplace",
       "display_name": "Agent-Index Marketplace",
       "description": "The marketplace integration collection: discover, download, and install marketplace collections; check for updates across all installed pieces; refresh the marketplace cache.",
       "category": "infrastructure",
       "author": "agent-index",
-      "current_version": "2.22.0",
+      "current_version": "2.22.1",
       "agent_index_min_version": "3.32.0",
       "repo_url": "https://github.com/agent-index/agent-index-marketplace",
       "zip_url": "https://github.com/agent-index/agent-index-marketplace/archive/refs/heads/main.zip",
