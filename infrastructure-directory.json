@@ -1,5 +1,5 @@
 {
-  "directory_version": "1.43.0",
+  "directory_version": "1.44.0",
   "last_updated": "2026-10-12",
   "infrastructure": [
     {
@@ -13,7 +13,7 @@
       "agent_index_min_version": "3.0.0",
       "repo_url": "https://github.com/agent-index/agent-index-core",
       "zip_url": "https://github.com/agent-index/agent-index-core/archive/refs/heads/main.zip",
-      "license": "proprietary",
+      "license": "AGPL-3.0-only WITH LicenseRef-AgentIndex-Collection-Exception-1.0",
       "private": true,
       "tags": [
         "infrastructure",
@@ -36,7 +36,7 @@
       "agent_index_min_version": "3.32.0",
       "repo_url": "https://github.com/agent-index/agent-index-marketplace",
       "zip_url": "https://github.com/agent-index/agent-index-marketplace/archive/refs/heads/main.zip",
-      "license": "proprietary",
+      "license": "AGPL-3.0-only WITH LicenseRef-AgentIndex-Collection-Exception-1.0",
       "tags": [
         "infrastructure",
         "marketplace",
