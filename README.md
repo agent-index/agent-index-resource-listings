@@ -30,4 +30,4 @@ The public directory index for the agent-index ecosystem. Contains the registrie
 
 ## License
 
-Proprietary — Copyright (c) 2026 Agent Index Inc. All rights reserved. See [LICENSE](LICENSE) for details.
+The Agent Index platform is licensed under the **GNU Affero General Public License v3.0 only**, with the **Agent Index Collection Exception 1.0** (`AGPL-3.0-only WITH LicenseRef-AgentIndex-Collection-Exception-1.0`). In short: if you change the platform, you share your changes, including when you run it as a network service; collections and storage adapters you build on it are yours to license however you choose. See [LICENSE](LICENSE) and [COLLECTION-EXCEPTION.md](COLLECTION-EXCEPTION.md). Releases made before the Agent Index 4.0 release (October 2026) remain under the license they were released with.
