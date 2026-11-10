@@ -2,8 +2,8 @@
   "marketplace_id": "agent-index-public",
   "display_name": "Agent Index Marketplace",
   "namespace": null,
-  "directory_version": "1.36.0",
-  "last_updated": "2026-11-11",
+  "directory_version": "1.37.0",
+  "last_updated": "2026-11-10",
   "collections": [
     {
       "name": "projects",
@@ -96,7 +96,7 @@
         "newsletters"
       ],
       "featured": false,
-      "last_updated": "2026-11-11"
+      "last_updated": "2026-11-10"
     },
     {
       "name": "slack-triage",
@@ -142,7 +142,7 @@
         "quality"
       ],
       "featured": false,
-      "last_updated": "2026-11-11"
+      "last_updated": "2026-11-10"
     },
     {
       "name": "developer",
