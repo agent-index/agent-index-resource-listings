@@ -1,6 +1,6 @@
 {
-  "directory_version": "2.26.0",
-  "last_updated": "2026-10-28",
+  "directory_version": "2.29.0",
+  "last_updated": "2026-11-12",
   "adapters": [
     {
       "backend_id": "gdrive",
@@ -14,7 +14,7 @@
       "repo_url": "https://github.com/agent-index/agent-index-filesystem-gdrive",
       "zip_url": "https://github.com/agent-index/agent-index-filesystem-gdrive/archive/refs/heads/main.zip",
       "license": "proprietary",
-      "last_updated": "2026-10-28"
+      "last_updated": "2026-11-12"
     },
     {
       "backend_id": "onedrive",
